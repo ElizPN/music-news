@@ -14,8 +14,9 @@ const Login = () => {
 
   return (
     <div className="login-container">
-      <h2>Login</h2>
+      <h2>Sing in to Paid Tabs</h2>
       <form onSubmit={handleLogin}>
+      <button type="submit" className="google-sign-in-button">Sing in with Google</button>
         <label htmlFor="username">Username or email</label>
         <input
           type="text"
