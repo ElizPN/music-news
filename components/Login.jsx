@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoginData } from "../hooks/UseLoginData";
+import './Login.css'; // Import your CSS file for styling
 
 const Login = () => {
   const {
@@ -15,7 +16,7 @@ const Login = () => {
     <div className="login-container">
       <h2>Login</h2>
       <form onSubmit={handleLogin}>
-        <label htmlFor="username">Username</label>
+        <label htmlFor="username">Username or email</label>
         <input
           type="text"
           id="username"
@@ -30,7 +31,7 @@ const Login = () => {
           onChange={hanleOnchangePassword()}
         />
         {error && <p className="error-message">{error}</p>}
-        <button type="submit">Login</button>
+        <button type="submit">Sing In</button>
       </form>
     </div>
   );
