@@ -6,7 +6,6 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    /* Removed border */
     background-color: #fff; 
 }
 
@@ -79,13 +78,13 @@ button:hover {
 }
 @media only screen and (max-width: 415px) {
     .google-sign-in-button {
-      background-position: 70px center; /* Adjust as needed */
+      background-position: 70px center; 
     }
   }
 
   @media only screen and (max-width: 375px) {
     .google-sign-in-button {
-      background-position: 60px center; /* Adjust as needed */
+      background-position: 60px center; 
     }
   }
 .google-sign-in-button:hover {
@@ -108,5 +107,16 @@ button:hover {
 .form-group {
     display: flex;
     justify-content: space-between;
-    align-items: center; /* Align items vertically */
+    align-items: center; 
 }
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  .sing-ap-link {
+    color:black; 
+  }

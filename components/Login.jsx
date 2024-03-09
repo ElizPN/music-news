@@ -29,8 +29,12 @@ const Login = () => {
           onChange={handleChangeUserName()}
         />
         <div className="form-group">
-          <label htmlFor="password" className="label-password" >Password</label>
-          <a href="https://paidtabs.com/" className="forgot-password-link">Forgot?</a>
+          <label htmlFor="password" className="label-password">
+            Password
+          </label>
+          <a href="https://paidtabs.com/" className="forgot-password-link">
+            Forgot?
+          </a>
         </div>
         <input
           type="password"
@@ -43,7 +47,10 @@ const Login = () => {
           {isLoading ? "Signing in..." : "Sign In"}
         </button>
         {isLoading && <div className="spinner">Snipper</div>}
-        <p>Don't have an account? Sing up </p>
+        <div className="signup-container">
+          <span>Don't have an account?  </span>
+          <a href="https://paidtabs.com/" className="sing-ap-link">Sign up</a>
+        </div>
       </form>
     </div>
   );
