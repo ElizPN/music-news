@@ -17,6 +17,7 @@ const Login = () => {
       <h2>Sing in to Paid Tabs</h2>
       <form onSubmit={handleLogin}>
       <button type="submit" className="google-sign-in-button">Sing in with Google</button>
+      <p>or sing with email</p>
         <label htmlFor="username">Username or email</label>
         <input
           type="text"
@@ -25,6 +26,7 @@ const Login = () => {
           onChange={handleChangeUserName()}
         />
         <label htmlFor="password">Password</label>
+        <p>Forgot?</p>
         <input
           type="password"
           id="password"
@@ -33,6 +35,7 @@ const Login = () => {
         />
         {error && <p className="error-message">{error}</p>}
         <button type="submit">Sing In</button>
+        <p>Don't have an account? Sing up </p>
       </form>
     </div>
   );
