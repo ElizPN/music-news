@@ -28,9 +28,9 @@ const Login = () => {
           value={username}
           onChange={handleChangeUserName()}
         />
-        <div>
-          <label htmlFor="password">Password</label>
-          <span style={{ marginLeft: "290px" }}>Forgot?</span>
+        <div className="form-group">
+          <label htmlFor="password" className="label-password" >Password</label>
+          <a href="https://paidtabs.com/" className="forgot-password-link">Forgot?</a>
         </div>
         <input
           type="password"
