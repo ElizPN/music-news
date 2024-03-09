@@ -4,12 +4,19 @@ export const useLoginData = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
 
-  const handleLogin = (e) => {
+  const handleLogin =   (e) => {
     e.preventDefault();
 
+    setIsLoading(true); 
+
     if (username === "Liam" && password === "123123") {
-      console.log("Login successful");
+      setTimeout(() => {
+        console.log("Login successful");
+        setIsLoading(false);
+    }, 1000);
+
       setError("");
     } else {
       setError("Invalid username or password");
@@ -28,6 +35,7 @@ export const useLoginData = () => {
     username,
     password,
     error,
+    isLoading,
     handleLogin,
     handleChangeUserName,
     hanleOnchangePassword,
