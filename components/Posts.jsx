@@ -1,7 +1,6 @@
 import React from 'react';
 import { usePostsData } from '../hooks/usePostsData'; 
 import './Posts.css'; 
-// import postImage from '../images/post.jpeg'; 
 
 export const Posts = () => {
 const {posts} = usePostsData();
