@@ -1,10 +1,10 @@
-import React from 'react';
+import Posts from "@/components/Posts";
+import React from "react";
 
 const PostsPage = () => {
   return (
     <div>
-      <h1>Posts Page</h1>
-      <p>Welcome to the Posts Page!</p>
+      <Posts />
     </div>
   );
 };
