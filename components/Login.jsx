@@ -49,7 +49,9 @@ const Login = () => {
         <button type="submit" disabled={isLoading}>
           {isLoading ? "Signing in..." : "Sign In"}
         </button>
-        {isLoading && <div className="spinner">Snipper</div>}
+        <div>
+        {isLoading && <div id="loading"></div>}
+        </div>
         <div className="signup-container">
           <span>Don't have an account? </span>
           <a href="https://paidtabs.com/" className="sing-ap-link">
