@@ -120,3 +120,20 @@ button:hover {
   .sing-ap-link {
     color:black; 
   }
+
+
+  .sing-in-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .sign-with-email {
+    position: relative;
+    text-align: center;
+    padding: 0 10px;
+  }
+  
+  

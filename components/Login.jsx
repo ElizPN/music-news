@@ -20,7 +20,10 @@ const Login = () => {
         <button type="submit" className="google-sign-in-button">
           Sing in with Google
         </button>
-        <p>or sing with email</p>
+        <div className="sing-in-container">
+          <div className="sign-with-email">or sign with email</div>
+        </div>
+
         <label htmlFor="username">Username or email</label>
         <input
           type="text"
@@ -48,8 +51,10 @@ const Login = () => {
         </button>
         {isLoading && <div className="spinner">Snipper</div>}
         <div className="signup-container">
-          <span>Don't have an account?  </span>
-          <a href="https://paidtabs.com/" className="sing-ap-link">Sign up</a>
+          <span>Don't have an account? </span>
+          <a href="https://paidtabs.com/" className="sing-ap-link">
+            Sign up
+          </a>
         </div>
       </form>
     </div>
