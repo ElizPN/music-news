@@ -1,0 +1,45 @@
+.post-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .post-picture {
+    width: 100px; /* Adjust according to your needs */
+    height: 100px; /* Adjust according to your needs */
+    border-radius: 50%; /* To make it circular */
+  }
+  
+  .post-content {
+    margin-top: 10px;
+  }
+  
+  .post-title {
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    color: #333;
+  }
+  
+  .post-summary {
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .post-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .post-button:hover {
+    background-color: #0056b3;
+  }
+  
