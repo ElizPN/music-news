@@ -48,9 +48,10 @@ const Login = () => {
         {error && <p className="error-message">{error}</p>}
         <button type="submit" disabled={isLoading}>
           {isLoading ? "Signing in..." : "Sign In"}
+          {isLoading && <div id="loading"></div>}
         </button>
         <div>
-        {isLoading && <div id="loading"></div>}
+       
         </div>
         <div className="signup-container">
           <span>Don't have an account? </span>
