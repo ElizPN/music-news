@@ -1,10 +1,31 @@
 import { Posts } from "@/components/Posts";
 import React from "react";
+import { getPostsDataService } from "../services/postsDataService";
 
-const PostsPage = () => {
+export async function getServerSideProps() {
+  const service = getPostsDataService();
+  try {
+    const posts = await service.getData();
+    return {
+      props: {
+        posts,
+      },
+    };
+  } catch (error) {
+    console.error("Error fetching posts:", error);
+    return {
+      props: {
+        posts: [],
+      },
+    };
+  }
+}
+
+const PostsPage = ({ posts }) => {
+  console.log(posts, "posts");
   return (
     <div>
-      <Posts />
+      <Posts posts={posts} />
     </div>
   );
 };
