@@ -14,6 +14,14 @@ export const getPostsDataService = () => {
         throw error;
       }
     },
+    getSinglePostData: async (postId) => {
+      try {
+        const response = await axios.get(`${apiURL}/${postId}`);
+        return response.data;
+      } catch (error) {
+        throw error;
+      }
+    }
   };
 
   return service;
