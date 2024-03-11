@@ -1,15 +1,15 @@
 .post-card {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     margin-bottom: 20px;
+    max-width: 900px;
   }
   
   .post-picture {
-    width: 100px; /* Adjust according to your needs */
-    height: 100px; /* Adjust according to your needs */
-    border-radius: 50%; /* To make it circular */
+    border-radius: 10px; 
+    max-width: 100%;
+    min-width: 100%;
   }
   
   .post-content {
@@ -18,14 +18,13 @@
   
   .post-title {
     background-color: white;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
     color: #333;
   }
   
   .post-summary {
-    background-color: lightgrey;
-    padding: 10px;
+    padding: 20px;
     border-radius: 8px;
   }
   
@@ -43,3 +42,14 @@
     background-color: #0056b3;
   }
   
+  /* responsivnes */
+@media (max-width: 768px) {
+    .post-card {
+        padding: 15px;
+    }
+
+    .post-title,
+    .post-summary {
+        padding: 8px;
+    }
+}
