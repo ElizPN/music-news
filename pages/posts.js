@@ -22,7 +22,6 @@ export async function getServerSideProps() {
 }
 
 const PostsPage = ({ posts }) => {
-  console.log(posts, "posts");
   return (
     <div>
       <Posts posts={posts} />
