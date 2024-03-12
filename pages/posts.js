@@ -1,7 +1,7 @@
 import { Posts } from "@/components/Posts";
 import React from "react";
 import { getPostsDataService } from "../services/postsDataService";
-import { Header } from '../components/Header';
+import { PageHeader } from '../components/common/PageHeader';
 
 export async function getServerSideProps() {
   const service = getPostsDataService();
@@ -25,7 +25,7 @@ export async function getServerSideProps() {
 const PostsPage = ({ posts }) => {
   return (
     <div>
-    <Header/>
+      <PageHeader/>
       <Posts posts={posts} />
     </div>
   );
