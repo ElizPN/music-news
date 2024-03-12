@@ -37,6 +37,11 @@ export const useLoginData = () => {
     }
   };
 
+  const handleSignOut = () => {
+    localStorage.removeItem("isLoggedIn");
+    router.push("/login"); 
+};
+
   const handleChangeUserName = () => {
     return (e) => setUsername(e.target.value);
   };
@@ -53,5 +58,6 @@ export const useLoginData = () => {
     handleLogin,
     handleChangeUserName,
     hanleOnchangePassword,
+    handleSignOut
   };
 };
