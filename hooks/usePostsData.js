@@ -1,9 +1,4 @@
-import { useState } from "react";
-
-
 export const usePostsData = () => {
-  const [posts, setPosts] = useState([]);
-
   const truncateText = (text, maxLength) => {
     if (text.length > maxLength) {
       return text.substring(0, maxLength) + "...";
@@ -12,5 +7,5 @@ export const usePostsData = () => {
     }
   };
   
-  return { posts, truncateText };
+  return { truncateText };
 };
