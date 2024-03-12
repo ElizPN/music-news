@@ -2,6 +2,8 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    background-color: white;
+    padding-right: 20px;
 }
 
 .sign-out-button {
