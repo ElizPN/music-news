@@ -43,21 +43,6 @@ body {
     border-radius: 8px;
     color: black; 
   }
-  
-  .post-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .post-button:hover {
-    background-color: #0056b3;
-  }
-
 
   .post-link {
     text-decoration: none
