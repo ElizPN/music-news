@@ -20,15 +20,16 @@ export const Posts = ({ posts }) => {
 
   
   return (
-    <div>
+    <div className="main-container">
       <div className="search-container">
         <input
+         className="search-input"
           type="text"
           placeholder="Search by title"
           value={searchQuery}
           onChange={handleSearchChange}
         />
-        <button onClick={handleSearchClear}>Clear</button>
+        <button onClick={handleSearchClear} className="search-button">Clear</button>
       </div>
       <div className="post-card-container">
         {filteredPosts?.length > 0 ?  (
