@@ -1,0 +1,21 @@
+.header-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sign-out-button {
+    background-color: red;
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
+.welcome-wrapper {
+    display: flex;
+    align-items: center;
+
+}
