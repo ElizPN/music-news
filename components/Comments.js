@@ -3,8 +3,8 @@ import { useState } from "react";
 import "./Comments.css";
 import { useCommentForm } from '../hooks/useCommentForm';
 
-export const Comments = ({ comments }) => {
-    const { values: newComment, handleChange, handleSubmit } = useCommentForm();
+export const Comments = ({ comments, postId }) => {
+    const { values: newComment, handleChange, handleSubmit } = useCommentForm(postId);
 
     return (
         <div className="comments-container">

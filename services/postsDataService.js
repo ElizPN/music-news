@@ -29,9 +29,19 @@ export const getPostsDataService = () => {
       } catch (error) {
         throw error;
       }
+    },
+    postComment: async(postId, values) => {
+      try {
+        const response = await axios.post(`${apiURL}/${postId}/comments`, {
+          ...values
+      });
+      } catch (error) {
+        throw error;
+      }
     }
   };
 
   return service;
 };
 
+// console.log('New comment:', values);

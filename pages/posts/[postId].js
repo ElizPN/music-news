@@ -17,7 +17,7 @@ export default function Post() {
     if (!postId) {
       return;
     }
-    
+
     const fetchData = async () => {
       try {
         const postData = await getPostsDataService().getSinglePostData(postId);
@@ -38,7 +38,7 @@ export default function Post() {
     <div>
         <PageHeader/>
       {post ? <SinglePost post={post} /> : <p>Loading...</p>}
-      {comments ? <Comments comments={comments} /> : ''}
+      {comments ? <Comments comments={comments} postId={postId} /> : ''}
     </div>
   );
 }

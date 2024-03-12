@@ -1,11 +1,11 @@
 import React from 'react';
+import { getPostsDataService } from '../services/postsDataService'; 
 
-export function useCommentForm() {
+export function useCommentForm(postId) {
     const [values, setValues] = React.useState({ name: '', email: '', body: '' });
-    const onSubmit = (values) => {
-        
-        // Handle submission logic here, such as sending the new comment to an API
-        console.log('New comment:', values);
+    const onSubmit = async (values) => {
+
+        await getPostsDataService().postComment(postId, values);
 
         // Clear the form after submission
         setValues({ name: '', email: '', body: '' });
