@@ -14,29 +14,31 @@ export default function Post() {
   
 
   useEffect(() => {
-    if (postId) {
-      const fetchData = async () => {
-        try {
-          const postData = await getPostsDataService().getSinglePostData(postId);
-          setPost(postData);
-
-          const commentsData = await getPostsDataService().getCommentsData(postId);
-          setComments(commentsData);
-        } catch (error) {
-          console.error('Error fetching post:', error);
-        }
-
-      };
-
-      fetchData();
+    if (!postId) {
+      return;
     }
+    
+    const fetchData = async () => {
+      try {
+        const postData = await getPostsDataService().getSinglePostData(postId);
+        setPost(postData);
+
+        const commentsData = await getPostsDataService().getCommentsData(postId);
+        setComments(commentsData);
+      } catch (error) {
+        console.error('Error fetching post:', error);
+      }
+
+    };
+
+    fetchData();
   }, [postId]);
 
   return (
     <div>
         <PageHeader/>
       {post ? <SinglePost post={post} /> : <p>Loading...</p>}
-      {comments ? <Comments comments={comments} />: ''}
+      {comments ? <Comments comments={comments} /> : ''}
     </div>
   );
 }
