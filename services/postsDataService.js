@@ -21,8 +21,17 @@ export const getPostsDataService = () => {
       } catch (error) {
         throw error;
       }
+    },
+    getCommentsData: async(postId) => {
+      try {
+        const response = await axios.get(`${apiURL}/${postId}/comments`);
+        return response.data;
+      } catch (error) {
+        throw error;
+      }
     }
   };
 
   return service;
 };
+
