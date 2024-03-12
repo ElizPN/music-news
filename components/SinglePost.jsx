@@ -4,7 +4,6 @@ import "./SinglePost.css";
 export const SinglePost = ({ post }) => {
     return (
         <div>
-        <h1 className="header">Header</h1>
       <div className="post-card-container">     
       <div className=".single-post-card">
       <a href="../posts" >

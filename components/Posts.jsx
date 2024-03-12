@@ -8,7 +8,6 @@ export const Posts = ({ posts }) => {
 
   return (
     <div>
-      <h2>Welcome Liam</h2>
       <div className="post-card-container">
         {posts?.length &&
           posts.map((post) => (

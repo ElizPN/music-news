@@ -2,6 +2,7 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { SinglePost } from '../../components/SinglePost';
+import { Header } from '../../components/Header';
 import { getPostsDataService } from '../../services/postsDataService'; // Adjust the path as per your project structure
 
 export default function Post() {
@@ -26,6 +27,7 @@ export default function Post() {
 
   return (
     <div>
+        <Header/>
       {post ? <SinglePost post={post} /> : <p>Loading...</p>}
     </div>
   );
