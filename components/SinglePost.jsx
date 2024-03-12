@@ -6,12 +6,12 @@ export const SinglePost = ({ post }) => {
         <div>
         <h1 className="header">Header</h1>
       <div className="post-card-container">     
-      <div className="post-card">
+      <div className=".single-post-card">
       <a href="../posts" >
-      <button  class="circle-button"></button>
+      <button  className="circle-button"></button>
       </a>
-        <h2 className="post-card">{post.title}</h2>
-        <p className="post-summary">{post.body}</p>
+        <h2>{post.title}</h2>
+        <p className="post-text">{post.body}</p>
         <img src="/images/post.jpeg" alt={post.title} className="post-picture" />
         </div>
        

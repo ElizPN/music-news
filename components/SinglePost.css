@@ -19,7 +19,7 @@ body {
   }
 
 
-.post-card {
+.single-post-card {
     background-color: #efefef; 
     margin-bottom: 20px;
     max-width: 900px;
@@ -36,7 +36,7 @@ body {
     color: #333;
   }
   
-  .post-summary {
+  .post-text {
     color: black; 
   }
 
@@ -61,12 +61,12 @@ body {
 
     /* responsivnes */
 @media (max-width: 768px) {
-    .post-card {
+    .single.post-card {
         padding: 15px;
     }
 
     .post-title,
-    .post-summary {
+    .post-text {
         padding: 8px;
     }
 }
