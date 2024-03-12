@@ -1,16 +1,38 @@
 import React from "react";
 import { usePostsData } from "../hooks/usePostsData";
+import { useState } from "react";
 import Link from "next/link";
 import "./Posts.css";
 
 export const Posts = ({ posts }) => {
   const { truncateText } = usePostsData();
 
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const filteredPosts = posts.filter(post =>
+    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const handleSearchChange = (e) => setSearchQuery(e.target.value);
+
+  const handleSearchClear = () => setSearchQuery("");
+
+
+  
   return (
     <div>
+      <div className="search-container">
+        <input
+          type="text"
+          placeholder="Search by title"
+          value={searchQuery}
+          onChange={handleSearchChange}
+        />
+        <button onClick={handleSearchClear}>Clear</button>
+      </div>
       <div className="post-card-container">
-        {posts?.length &&
-          posts.map((post) => (
+        {filteredPosts?.length > 0 ?  (
+          filteredPosts.map((post) => (
             <Link
               key={post.id}
               href={`/posts/${post.id}`}
@@ -28,7 +50,7 @@ export const Posts = ({ posts }) => {
                 </div>
               </div>
             </Link>
-          ))}
+          ))) : (<p>No posts found</p>)}
       </div>
     </div>
   );
