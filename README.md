@@ -7,31 +7,31 @@ This project developed as part of a technical task focusing on showcasing ReactJ
 ## Functionality
 ###  Fake Login
 
-Pure CSS: Utilizes CSS (or a CSS preprocessor) for styling with subtle animations for UI interactions (e.g., hover, focus, active).
-Fake Loading: Implements simulated loading effect upon clicking the sign-in button, altering the button's text to "Signing in..." and incorporating a loading spinner.
-Handle Errors: Displaying an error message if the user enters incorrect information.
-localStorage Usage: Checking if the user is already logged in with localStorage and redirects to the homepage at /posts.
-HTML5 Semantic Elements: Proper implementation of HTML5 semantic elements (e.g., section, h1, button, p, form, label, input).
+- Pure CSS: Utilizes CSS (or a CSS preprocessor) for styling with subtle animations for UI interactions (e.g., hover, focus, active).
+- Fake Loading: Implemented simulated loading effect upon clicking the sign-in button, altering the button's text to "Signing in..." and incorporating a loading spinner.
+- Handled Errors: Displaying an error message if the user enters incorrect information.
+- localStorage Usage: Checking if the user is already logged in with localStorage and redirects to the homepage at /posts.
+- HTML5 Semantic Elements: Proper implementation of HTML5 semantic elements (e.g., section, h1, button, p, form, label, input).
 
 ###  Posts Page
-Homepage
-Displayed a list of blog posts with their title and summary.
-Each blog post in the list is clickable, redirecting the user to the post's detail page.
-API Integration
-Fetch posts for the blog from https://jsonplaceholder.typicode.com/posts.
-Implemented server-side rendering (SSR) for fetching posts.
+
+- Displayed a list of blog posts with their title and summary.
+- Each blog post in the list is clickable, redirecting the user to the post's detail page.
+- API Integration
+Posts are fetched for the blog from https://jsonplaceholder.typicode.com/posts.
+- Implemented server-side rendering (SSR) for fetching posts.
 
 ###  Post Detail Page
 
-Displayed the full content of the blog post, including the title, content, date, and picture.
-Included a back button to return to the homepage.
+- Displayed the full content of the blog post, including the title, content, date, and picture.
+- Included a back button to return to the homepage.
 
 ###  Bonus Challenges 
-Implemented pagination.
-Added a search feature on the homepage to filter posts by title.
-Implemented a simple comment system on the post detail page, allowing users to submit comments using the provided API.
+- Implemented pagination.
+- Added a search feature on the homepage to filter posts by title.
+- Implemented a simple comment system on the post detail page, allowing users to submit comments using the provided API.
 
-## If you want to run it locally
+## If you want to run the project locally
 
 Clone the project
 
