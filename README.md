@@ -1,7 +1,7 @@
 
 The project has been deployed and can be accessed at [Music news](https://music-news-ozaqgn8tl-lizas-projects-35e77909.vercel.app/login)
 
-This repository contains a project developed as part of a technical task focusing on showcasing ReactJS and [Next.js](https://nextjs.org/) proficiency. The project consists of two main parts: a Fake Login page and a Personal Blog Site.
+This project developed as part of a technical task focusing on showcasing ReactJS and [Next.js](https://nextjs.org/) proficiency. The project consists of two main parts: a Fake Login page and a Personal Blog Site.
 
 
 ## Functionality
