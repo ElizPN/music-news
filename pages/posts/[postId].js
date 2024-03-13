@@ -35,7 +35,7 @@ export default function Post() {
   }, [postId]);
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#efefef"}}>
         <PageHeader/>
       {post ? <SinglePost post={post} /> : <p>Loading...</p>}
       {comments ? <Comments comments={comments} postId={postId} /> : ''}
