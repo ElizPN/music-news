@@ -6,6 +6,7 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
+    margin-top: 200px;
     background-color: #fff; 
 }
 
@@ -152,4 +153,11 @@ button:hover {
   }
   @-webkit-keyframes spin {
     to { -webkit-transform: rotate(360deg); }
+  }
+
+
+  @media only screen and (max-width: 430px) {
+    .login-container  {
+      margin-top: 10px;
+    }
   }
