@@ -34,6 +34,7 @@ export const useLoginData = () => {
       setError("");
     } else {
       setError("Invalid username or password");
+      setIsLoading(false);
     }
   };
 
