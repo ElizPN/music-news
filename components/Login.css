@@ -138,8 +138,8 @@ button:hover {
   
   #loading {
     display: inline-block;
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
     margin-left: 5px;
     border: 3px solid rgba(255,255,255,.3);
     border-radius: 50%;
@@ -160,4 +160,34 @@ button:hover {
     .login-container  {
       margin-top: 10px;
     }
+  }
+/* horizontl line */
+
+  .sign-in-container {
+    text-align: center;
+  }
+  
+  .sign-with-email {
+    position: relative; 
+    display: inline-block; 
+  }
+  
+  .sign-with-email::before,
+  .sign-with-email::after {
+    content: ""; 
+    position: absolute; 
+    top: 50%; 
+    width: 90%; 
+    height: 1px; 
+    background-color:#efefef; 
+  }
+  
+  .sign-with-email::before {
+    left: 0; 
+    margin-left: -90%; 
+  }
+  
+  .sign-with-email::after {
+    right: 0; 
+    margin-right: -90%;
   }
