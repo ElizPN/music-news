@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+This repository contains a project developed as part of a technical task focusing on showcasing ReactJS abilities and [Next.js](https://nextjs.org/) proficiency. The project consists of two main parts: a Fake Login page and a Personal Blog Site.
 
 ## Getting Started
 
