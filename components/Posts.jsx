@@ -13,17 +13,26 @@ export const Posts = ({ posts }) => {
     post.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const handleSearchChange = (e) => setSearchQuery(e.target.value);
+  const handleSearchChange = (e) => {
+    setSearchQuery(e.target.value);
+    setCurrentPage(1);
+  };
+  const handleSearchClear = () => {
+    setSearchQuery("");
+    setCurrentPage(1);
+  };
 
-  const handleSearchClear = () => setSearchQuery("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const postsPerPage = 5;
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = filteredPosts.slice(indexOfFirstPost, indexOfLastPost);
 
-
-  
   return (
     <div className="main-container">
       <div className="search-container">
         <input
-         className="search-input"
+          className="search-input"
           type="text"
           placeholder="Search by title"
           value={searchQuery}
@@ -32,26 +41,33 @@ export const Posts = ({ posts }) => {
         <button onClick={handleSearchClear} className="search-button">Clear</button>
       </div>
       <div className="post-card-container">
-        {filteredPosts?.length > 0 ?  (
-          filteredPosts.map((post) => (
-            <Link
-              key={post.id}
-              href={`/posts/${post.id}`}
-              className="post-link"
-            >
-              <div key={post.id} className="post-card">
-                <img
-                  src="/images/post.jpeg"
-                  alt={post.title}
-                  className="post-picture"
-                />
-                <div className="post-content">
-                  <h2 className="post-title">{post.title}</h2>
-                  <p className="post-summary">{truncateText(post.body, 100)}</p>
+        {currentPosts.length > 0 ? (
+          currentPosts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/posts/${post.id}`}
+                className="post-link"
+              >
+                <div key={post.id} className="post-card">
+                  <img
+                    src="/images/post.jpeg"
+                    alt={post.title}
+                    className="post-picture"
+                  />
+                  <div className="post-content">
+                    <h2 className="post-title">{post.title}</h2>
+                    <p className="post-summary">{truncateText(post.body, 100)}</p>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))) : (<p>No posts found</p>)}
+              </Link>
+            ))
+        ) : (<p>No posts found</p>)}
+      </div>
+
+      <div className="pagination">
+        {Array.from({ length: Math.ceil(filteredPosts.length / postsPerPage) }, (_, i) => (
+          <button key={i} onClick={() => setCurrentPage(i + 1)} className={currentPage === i + 1 ? 'active' : ''}>{i + 1}</button>
+        ))}
       </div>
     </div>
   );
